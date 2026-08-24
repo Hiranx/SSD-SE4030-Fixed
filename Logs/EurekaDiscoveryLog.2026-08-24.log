@@ -1,0 +1,455 @@
+[2026-08-24 08:30:47 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2026-08-24 08:30:48 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.devd.spring.bookstoreeurekadiscoveryservice.BookstoreEurekaDiscoveryServiceApplication : No active profile set, falling back to default profiles: default
+[2026-08-24 08:30:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.context.scope.GenericScope : BeanFactory id=e73cd28f-0a03-3c59-a5f2-efde8e2aedc3
+[2026-08-24 08:30:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2026-08-24 08:30:51 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8761 (http)
+[2026-08-24 08:30:51 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8761"]
+[2026-08-24 08:30:51 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.catalina.core.StandardService : Starting service [Tomcat]
+[2026-08-24 08:30:51 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2026-08-24 08:30:52 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+[2026-08-24 08:30:52 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4243 ms
+[2026-08-24 08:30:53 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+[2026-08-24 08:30:53 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2026-08-24 08:30:53 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.DynamicPropertyFactory : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@161dd92a
+[2026-08-24 08:30:53 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[2026-08-24 08:30:54 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.sleuth.zipkin2.ZipkinAutoConfiguration : Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ffced4e}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+[2026-08-24 08:30:55 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.sun.jersey.server.impl.application.WebApplicationImpl : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+[2026-08-24 08:30:55 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON encoding codec LegacyJacksonJson
+[2026-08-24 08:30:55 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON decoding codec LegacyJacksonJson
+[2026-08-24 08:30:55 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML encoding codec XStreamXml
+[2026-08-24 08:30:55 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML decoding codec XStreamXml
+[2026-08-24 08:30:56 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+[2026-08-24 08:30:56 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2026-08-24 08:30:57 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+[2026-08-24 08:30:58 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+[2026-08-24 08:30:58 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.DiscoveryClient : Initializing Eureka in region us-east-1
+[2026-08-24 08:30:58 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.DiscoveryClient : Client configured to neither register nor query for data.
+[2026-08-24 08:30:58 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.DiscoveryClient : Discovery Client initialized at timestamp 1787540458351 with initial instances count: 0
+[2026-08-24 08:31:00 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+[2026-08-24 08:31:01 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.DefaultEurekaServerContext : Initializing ...
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.cluster.PeerEurekaNodes : Adding new peer nodes [http://localhost:8761/eureka/]
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON encoding codec LegacyJacksonJson
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON decoding codec LegacyJacksonJson
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML encoding codec XStreamXml
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML decoding codec XStreamXml
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.cluster.PeerEurekaNodes : Replica node URL:  http://localhost:8761/eureka/
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.registry.AbstractInstanceRegistry : Finished initializing remote region registries. All known remote regions: []
+[2026-08-24 08:31:01 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.DefaultEurekaServerContext : Initialized
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application BOOKSTORE-EUREKA-DISCOVERY-SERVICE with eureka with status UP
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8761"]
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Setting the eureka configuration..
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Eureka data center value eureka.datacenter is not set, defaulting to default
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Eureka environment value eureka.environment is not set, defaulting to test
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : isAws returned false
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Initialized server context
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Got 1 instances from neighboring DS node
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Renew threshold is: 1
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Changing status to UP
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-48> org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration : Started Eureka Server
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8761 (http) with context path ''
+[2026-08-24 08:31:02 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8761
+[2026-08-24 08:31:03 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.devd.spring.bookstoreeurekadiscoveryservice.BookstoreEurekaDiscoveryServiceApplication : Started BookstoreEurekaDiscoveryServiceApplication in 19.446 seconds (JVM running for 23.653)
+[2026-08-24 08:31:03 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application BOOKSTORE-EUREKA-DISCOVERY-SERVICE with eureka with status DOWN
+[2026-08-24 08:31:04 IST] ERROR [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Cannot shutdown ReplicaAwareInstanceRegistry
+java.lang.NullPointerException: null
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.shutdown(PeerAwareInstanceRegistryImpl.java:174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:949)
+[2026-08-24 08:31:04 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.eureka.DefaultEurekaServerContext : Shutting down ...
+[2026-08-24 08:31:04 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.eureka.DefaultEurekaServerContext : Shut down
+[2026-08-24 08:31:04 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+[2026-08-24 08:31:05 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.discovery.DiscoveryClient : Shutting down DiscoveryClient ...
+[2026-08-24 08:31:05 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.discovery.DiscoveryClient : Completed shut down of DiscoveryClient
+[2026-08-24 08:32:06 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2026-08-24 08:32:06 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.devd.spring.bookstoreeurekadiscoveryservice.BookstoreEurekaDiscoveryServiceApplication : No active profile set, falling back to default profiles: default
+[2026-08-24 08:32:08 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.context.scope.GenericScope : BeanFactory id=e73cd28f-0a03-3c59-a5f2-efde8e2aedc3
+[2026-08-24 08:32:08 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8761 (http)
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8761"]
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.catalina.core.StandardService : Starting service [Tomcat]
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2670 ms
+[2026-08-24 08:32:09 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2026-08-24 08:32:09 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.DynamicPropertyFactory : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@252744a1
+[2026-08-24 08:32:10 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.actuate.endpoint.EndpointId : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[2026-08-24 08:32:11 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.sleuth.zipkin2.ZipkinAutoConfiguration : Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@bbb6f0}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+[2026-08-24 08:32:12 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.sun.jersey.server.impl.application.WebApplicationImpl : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+[2026-08-24 08:32:12 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON encoding codec LegacyJacksonJson
+[2026-08-24 08:32:12 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON decoding codec LegacyJacksonJson
+[2026-08-24 08:32:12 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML encoding codec XStreamXml
+[2026-08-24 08:32:12 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML decoding codec XStreamXml
+[2026-08-24 08:32:13 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+[2026-08-24 08:32:13 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.config.sources.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2026-08-24 08:32:13 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+[2026-08-24 08:32:14 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+[2026-08-24 08:32:14 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.DiscoveryClient : Initializing Eureka in region us-east-1
+[2026-08-24 08:32:14 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.DiscoveryClient : Client configured to neither register nor query for data.
+[2026-08-24 08:32:14 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.DiscoveryClient : Discovery Client initialized at timestamp 1787540534692 with initial instances count: 0
+[2026-08-24 08:32:17 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+[2026-08-24 08:32:17 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+[2026-08-24 08:32:17 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.DefaultEurekaServerContext : Initializing ...
+[2026-08-24 08:32:17 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.cluster.PeerEurekaNodes : Adding new peer nodes [http://localhost:8761/eureka/]
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON encoding codec LegacyJacksonJson
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using JSON decoding codec LegacyJacksonJson
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML encoding codec XStreamXml
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.discovery.provider.DiscoveryJerseyProvider : Using XML decoding codec XStreamXml
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.cluster.PeerEurekaNodes : Replica node URL:  http://localhost:8761/eureka/
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.registry.AbstractInstanceRegistry : Finished initializing remote region registries. All known remote regions: []
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.netflix.eureka.DefaultEurekaServerContext : Initialized
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 2 endpoint(s) beneath base path '/actuator'
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application BOOKSTORE-EUREKA-DISCOVERY-SERVICE with eureka with status UP
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8761"]
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Setting the eureka configuration..
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Eureka data center value eureka.datacenter is not set, defaulting to default
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Eureka environment value eureka.environment is not set, defaulting to test
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : isAws returned false
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap : Initialized server context
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Got 1 instances from neighboring DS node
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Renew threshold is: 1
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Changing status to UP
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Thread-45> org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration : Started Eureka Server
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8761 (http) with context path ''
+[2026-08-24 08:32:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration : Updating port to 8761
+[2026-08-24 08:32:19 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <main> com.devd.spring.bookstoreeurekadiscoveryservice.BookstoreEurekaDiscoveryServiceApplication : Started BookstoreEurekaDiscoveryServiceApplication in 16.619 seconds (JVM running for 19.972)
+[2026-08-24 08:32:20 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <RMI TCP Connection(5)-192.168.43.173> org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-08-24 08:32:20 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <RMI TCP Connection(5)-192.168.43.173> org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+[2026-08-24 08:32:20 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <RMI TCP Connection(5)-192.168.43.173> org.springframework.web.servlet.DispatcherServlet : Completed initialization in 17 ms
+[2026-08-24 08:32:23 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 1f0af761775a5581], [SpanId -> 1f0af761775a5581] 
+      <http-nio-8761-exec-3> com.netflix.eureka.registry.AbstractInstanceRegistry : DS: Registry: lease doesn't exist, registering resource: BOOKSTORE-API-GATEWAY-SERVICE - LAPTOP-PIAE5DDA:bookstore-api-gateway-service:8765
+[2026-08-24 08:32:23 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 1f0af761775a5581], [SpanId -> 1f0af761775a5581] 
+      <http-nio-8761-exec-3> com.netflix.eureka.resources.InstanceResource : Not Found (Renew): BOOKSTORE-API-GATEWAY-SERVICE - LAPTOP-PIAE5DDA:bookstore-api-gateway-service:8765
+[2026-08-24 08:32:24 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 3a99b0639025b422], [SpanId -> 3a99b0639025b422] 
+      <http-nio-8761-exec-2> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-API-GATEWAY-SERVICE/LAPTOP-PIAE5DDA:bookstore-api-gateway-service:8765 with status UP (replication=false)
+[2026-08-24 08:32:24 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 389988df531f636b], [SpanId -> 389988df531f636b] 
+      <http-nio-8761-exec-4> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-API-GATEWAY-SERVICE/LAPTOP-PIAE5DDA:bookstore-api-gateway-service:8765 with status UP (replication=true)
+[2026-08-24 08:32:25 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@bbb6f0}> zipkin2.reporter.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+[2026-08-24 08:32:25 IST] WARN [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@bbb6f0}> zipkin2.reporter.AsyncReporter$BoundedAsyncReporter : Dropped 3 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748)
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132)
+	at zipkin2.Call$Base.execute(Call.java:380)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:285)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:354)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:473)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:568)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:254)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:349)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:367)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1248)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1182)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1076)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1010)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739)
+	... 9 common frames omitted
+[2026-08-24 08:33:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 0ms
+[2026-08-24 08:33:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> a0c32d6b009a7e16], [SpanId -> a0c32d6b009a7e16] 
+      <http-nio-8761-exec-2> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-ACCOUNT-SERVICE/LAPTOP-PIAE5DDA:bookstore-account-service:4001 with status UP (replication=false)
+[2026-08-24 08:33:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 15af54bc77e3197b], [SpanId -> 15af54bc77e3197b] 
+      <http-nio-8761-exec-4> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-ACCOUNT-SERVICE/LAPTOP-PIAE5DDA:bookstore-account-service:4001 with status UP (replication=true)
+[2026-08-24 08:34:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 2ms
+[2026-08-24 08:34:30 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> b21dce6bc9f6e4d6], [SpanId -> b21dce6bc9f6e4d6] 
+      <http-nio-8761-exec-5> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-BILLING-SERVICE/LAPTOP-PIAE5DDA:bookstore-billing-service:5001 with status UP (replication=false)
+[2026-08-24 08:34:31 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 5dc1b41077b36dda], [SpanId -> 5dc1b41077b36dda] 
+      <http-nio-8761-exec-6> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-BILLING-SERVICE/LAPTOP-PIAE5DDA:bookstore-billing-service:5001 with status UP (replication=true)
+[2026-08-24 08:35:16 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 7b14d7ee8dbb956a], [SpanId -> 7b14d7ee8dbb956a] 
+      <http-nio-8761-exec-7> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-CATALOG-SERVICE/LAPTOP-PIAE5DDA:bookstore-catalog-service:6001 with status UP (replication=false)
+[2026-08-24 08:35:17 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> 75df3fb0cc081f5f], [SpanId -> 75df3fb0cc081f5f] 
+      <http-nio-8761-exec-8> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-CATALOG-SERVICE/LAPTOP-PIAE5DDA:bookstore-catalog-service:6001 with status UP (replication=true)
+[2026-08-24 08:35:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 3ms
+[2026-08-24 08:35:49 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> a02eed3011a68080], [SpanId -> a02eed3011a68080] 
+      <http-nio-8761-exec-1> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-PAYMENT-SERVICE/LAPTOP-PIAE5DDA:bookstore-payment-service:8001 with status UP (replication=false)
+[2026-08-24 08:35:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> d27ba886b41e969d], [SpanId -> d27ba886b41e969d] 
+      <http-nio-8761-exec-5> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-PAYMENT-SERVICE/LAPTOP-PIAE5DDA:bookstore-payment-service:8001 with status UP (replication=true)
+[2026-08-24 08:36:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 13ms
+[2026-08-24 08:36:34 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> eb09f91d8f0b1534], [SpanId -> eb09f91d8f0b1534] 
+      <http-nio-8761-exec-9> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-ORDER-SERVICE/LAPTOP-PIAE5DDA:bookstore-order-service:7001 with status UP (replication=false)
+[2026-08-24 08:36:35 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> b3b0da1c498e7ae8], [SpanId -> b3b0da1c498e7ae8] 
+      <http-nio-8761-exec-10> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-ORDER-SERVICE/LAPTOP-PIAE5DDA:bookstore-order-service:7001 with status UP (replication=true)
+[2026-08-24 08:37:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 1ms
+[2026-08-24 08:38:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 13ms
+[2026-08-24 08:39:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 6ms
+[2026-08-24 08:40:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 3ms
+[2026-08-24 08:41:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 9ms
+[2026-08-24 08:42:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 4ms
+[2026-08-24 08:43:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 13ms
+[2026-08-24 08:44:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 11ms
+[2026-08-24 08:45:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 2ms
+[2026-08-24 08:46:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 11ms
+[2026-08-24 08:47:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <ReplicaAwareInstanceRegistry - RenewalThresholdUpdater> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Current renewal threshold is : 11
+[2026-08-24 08:47:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 2ms
+[2026-08-24 08:48:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 14ms
+[2026-08-24 08:49:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 2ms
+[2026-08-24 08:50:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 2ms
+[2026-08-24 08:51:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 3ms
+[2026-08-24 08:52:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 13ms
+[2026-08-24 08:53:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 1ms
+[2026-08-24 08:54:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 10ms
+[2026-08-24 08:55:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 11ms
+[2026-08-24 08:56:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 5ms
+[2026-08-24 08:57:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 5ms
+[2026-08-24 08:58:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 1ms
+[2026-08-24 08:59:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 11ms
+[2026-08-24 09:00:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 4ms
+[2026-08-24 09:01:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 0ms
+[2026-08-24 09:02:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <ReplicaAwareInstanceRegistry - RenewalThresholdUpdater> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Current renewal threshold is : 11
+[2026-08-24 09:02:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 0ms
+[2026-08-24 09:03:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 14ms
+[2026-08-24 09:04:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 12ms
+[2026-08-24 09:05:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 12ms
+[2026-08-24 09:06:18 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <Eureka-EvictionTimer> com.netflix.eureka.registry.AbstractInstanceRegistry : Running the evict task with compensationTime 0ms
+[2026-08-24 09:06:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application BOOKSTORE-EUREKA-DISCOVERY-SERVICE with eureka with status DOWN
+[2026-08-24 09:06:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> c0dc3df015083890], [SpanId -> c0dc3df015083890] 
+      <http-nio-8761-exec-6> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-CATALOG-SERVICE/LAPTOP-PIAE5DDA:bookstore-catalog-service:6001 with status DOWN (replication=false)
+[2026-08-24 09:06:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> bdcce0700e3491de], [SpanId -> bdcce0700e3491de] 
+      <http-nio-8761-exec-7> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-ACCOUNT-SERVICE/LAPTOP-PIAE5DDA:bookstore-account-service:4001 with status DOWN (replication=false)
+[2026-08-24 09:06:50 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> f76061a0185d483b], [SpanId -> f76061a0185d483b] 
+      <http-nio-8761-exec-4> com.netflix.eureka.registry.AbstractInstanceRegistry : Registered instance BOOKSTORE-BILLING-SERVICE/LAPTOP-PIAE5DDA:bookstore-billing-service:5001 with status DOWN (replication=false)
+[2026-08-24 09:06:51 IST] ERROR [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <TaskBatchingWorker-target_localhost-9> com.netflix.eureka.cluster.ReplicationTaskProcessor : Network level connection to peer localhost; retrying after delay
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:117)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:193)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 10 common frames omitted
+[2026-08-24 09:06:51 IST] ERROR [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl : Cannot shutdown ReplicaAwareInstanceRegistry
+java.lang.NullPointerException: null
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.shutdown(PeerAwareInstanceRegistryImpl.java:174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:949)
+[2026-08-24 09:06:51 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.eureka.DefaultEurekaServerContext : Shutting down ...
+[2026-08-24 09:06:51 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.eureka.DefaultEurekaServerContext : Shut down
+[2026-08-24 09:06:51 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+[2026-08-24 09:06:52 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.discovery.DiscoveryClient : Shutting down DiscoveryClient ...
+[2026-08-24 09:06:52 IST] INFO [Service Name -> bookstore-eureka-discovery-service], [TraceId -> ], [SpanId -> ] 
+      <SpringContextShutdownHook> com.netflix.discovery.DiscoveryClient : Completed shut down of DiscoveryClient

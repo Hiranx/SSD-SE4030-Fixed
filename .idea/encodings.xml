@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-account-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-api-gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-billing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-catalog-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-eureka-discovery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/bookstore-payment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookStoreApp-Distributed-Application-master/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
