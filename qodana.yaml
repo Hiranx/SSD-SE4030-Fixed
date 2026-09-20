@@ -1,0 +1,148 @@
+#-------------------------------------------------------------------------------#
+#               Qodana analysis is configured by qodana.yaml file               #
+#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
+#-------------------------------------------------------------------------------#
+version: "1.0"
+#Specify inspection profile for code analysis
+profile:
+  name: qodana.starter
+#Enable inspections
+#include:
+#  - name: <SomeEnabledInspectionId>
+#Disable inspections
+#exclude:
+#  - name: <SomeDisabledInspectionId>
+#    paths:
+#      - <path/where/not/run/inspection>
+projectJDK: 8 #(Applied in CI/CD pipeline)
+#Execute shell command before Qodana execution (Applied in CI/CD pipeline)
+#bootstrap: sh ./prepare-qodana.sh
+#Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
+#plugins:
+#  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
+#Specify Qodana linter for analysis (Applied in CI/CD pipeline)
+linter: jetbrains/qodana-jvm:latest
+include:
+  - name: SizeReplaceableByIsEmpty
+  - name: UnnecessaryLocalVariable
+  - name: UNUSED_IMPORT
+  - name: RedundantMethodOverride
+  - name: JavadocDeclaration
+  - name: NullableProblems
+  - name: ComposeMissingKeys
+  - name: ComposeUnknownKeys
+  - name: ComposeUnquotedPorts
+  - name: ComposeUnknownValues
+  - name: DockerFileArgumentCount
+  - name: DockerFileRunCommandMissingContinuation
+  - name: DockerFileAssignments
+  - name: DockerFileAddOrCopyPaths
+  - name: DockerJsonFormStringLiterals
+  - name: HtmlWrongAttributeValue
+  - name: HtmlNonExistentInternetResource
+  - name: HtmlUnknownAnchorTarget
+  - name: HtmlUnknownTarget
+  - name: HtmlUnknownTag
+  - name: HtmlUnknownAttribute
+  - name: HtmlExtraClosingTag
+  - name: HtmlPresentationalElement
+  - name: HtmlDeprecatedTag
+  - name: HtmlDeprecatedAttribute
+  - name: RequiredAttributes
+  - name: HtmlMissingClosingTag
+  - name: CheckImageSize
+  - name: CheckValidXmlInScriptTagBody
+  - name: CheckEmptyScriptTag
+  - name: HtmlUnknownBooleanAttribute
+  - name: MysqlSpaceAfterFunctionNameInspection
+  - name: MysqlParsingInspection
+  - name: MysqlLoadDataPathInspection
+  - name: NodeCoreCodingAssistance
+  - name: VulnerableLibrariesGlobal
+  - name: NpmVulnerableApiCode
+  - name: SerializableDeserializableClassInSecureContext
+  - name: NonFinalClone
+  - name: HttpUrlsUsage
+  - name: UnsecureRandomNumberGeneration
+  - name: DesignForExtension
+  - name: CustomSecurityManager
+  - name: CustomClassloader
+  - name: CloneableClassInSecureContext
+  - name: SystemSetSecurityManager
+  - name: LoadLibraryWithNonConstantString
+  - name: JDBCExecuteWithNonConstantString
+  - name: RuntimeExecWithNonConstantString
+  - name: JDBCPrepareStatementWithNonConstantString
+  - name: SystemProperties
+  - name: PublicStaticCollectionField
+  - name: PublicStaticArrayField
+  - name: ClassLoaderInstantiation
+  - name: SqlInsertValuesInspection
+  - name: SqlCallNotationInspection
+  - name: SqlCaseVsIfInspection
+  - name: SqlCaseVsCoalesceInspection
+  - name: SqlTransactionStatementInTriggerInspection
+  - name: SqlGotoInspection
+  - name: SqlUnusedVariableInspection
+  - name: SqlUnusedSubqueryItemInspection
+  - name: SqlUnusedCteInspection
+  - name: SqlJoinWithoutOnInspection
+  - name: SqlResolveInspection
+  - name: SqlUnreachableCodeInspection
+  - name: SqlUnicodeStringLiteralInspection
+  - name: SqlTypeInspection
+  - name: SqlTriggerTransitionInspection
+  - name: SqlSideEffectsInspection
+  - name: SqlStorageInspection
+  - name: SqlDialectInspection
+  - name: SqlRedundantLimitInspection
+  - name: SqlRedundantOrderingDirectionInspection
+  - name: SqlRedundantElseNullInspection
+  - name: SqlRedundantCodeInCoalesceInspection
+  - name: SqlRedundantAliasInspection
+  - name: SqlNullComparisonInspection
+  - name: SqlNamedArgumentsInspection
+  - name: SqlNoDataSourceInspection
+  - name: SqlMultipleLimitClausesInspection
+  - name: SqlMissingReturnInspection
+  - name: SqlMissingColumnAliasesInspection
+  - name: SqlMisleadingReferenceInspection
+  - name: SqlInsertIntoGeneratedColumnInspection
+  - name: SqlInsertNullIntoNotNullInspection
+  - name: SqlDropIndexedColumnInspection
+  - name: SqlStringLengthExceededInspection
+  - name: SqlIllegalCursorStateInspection
+  - name: SqlDtInspection
+  - name: SqlIdentifierInspection
+  - name: SqlSignatureInspection
+  - name: SqlDerivedTableAliasInspection
+  - name: SqlDuplicateColumnInspection
+  - name: SqlDeprecateTypeInspection
+  - name: SqlWithoutWhereInspection
+  - name: SqlCurrentSchemaInspection
+  - name: SqlConstantExpressionInspection
+  - name: SqlConstantConditionInspection
+  - name: SqlShouldBeInGroupByInspection
+  - name: SqlCheckUsingColumnsInspection
+  - name: SqlShadowingAliasInspection
+  - name: SqlAutoIncrementDuplicateInspection
+  - name: SqlAmbiguousColumnInspection
+  - name: SqlAggregatesInspection
+  - name: SqlAddNotNullColumnInspection
+  - name: FormSpellChecking
+  - name: NoScrollPane
+  - name: NoButtonGroup
+  - name: NoLabelFor
+  - name: MissingMnemonic
+  - name: InvalidPropertyKeyForm
+  - name: I18nForm
+  - name: DuplicateMnemonic
+  - name: OneButtonGroup
+  - name: BoundFieldAssignment
+  - name: YAMLSchemaValidation
+  - name: YAMLUnusedAnchor
+  - name: YAMLUnresolvedAlias
+  - name: YAMLIncompatibleTypes
+  - name: YAMLRecursiveAlias
+  - name: YAMLDuplicatedKeys
+  - name: YAMLSchemaDeprecation
