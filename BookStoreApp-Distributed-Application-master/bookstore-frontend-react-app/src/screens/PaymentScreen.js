@@ -16,10 +16,10 @@ const PaymentScreen = ({ history }) => {
   }
 
   const [paymentMethodId, setPaymentMethodId] = useState('');
-  const [cardNumber, setCardNumber] = useState('4111 1111 1111 1111');
-  const [expirationMonth, setExpirationMonth] = useState('10');
-  const [expirationYear, setExpirationYear] = useState('23');
-  const [cvv, setCvv] = useState('123');
+  const [cardNumber, setCardNumber] = useState('');
+  const [expirationMonth, setExpirationMonth] = useState('');
+  const [expirationYear, setExpirationYear] = useState('');
+  const [cvv, setCvv] = useState('');
   const [message, setMessage] = useState(null);
 
   const dispatch = useDispatch();
