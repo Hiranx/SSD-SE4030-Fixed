@@ -33,7 +33,8 @@ import {
   deleteUserApi,
   getAllUsersApi,
   getUserApi,
-  updateUserApi
+  updateUserApi,
+  postGoogleLoginApi
 } from '../service/RestApiCalls';
 import { getErrorMessage } from '../service/CommonUtils';
 
@@ -74,6 +75,33 @@ export const login = (usernameOrEmail, password) => async (dispatch) => {
       payload: getErrorMessage(error)
     });
   }
+};
+
+export const loginWithGoogle = (idToken) => async (dispatch) => {
+  try {
+    dispatch({ type: USER_LOGIN_REQUEST });
+
+    const loginResponse = await postGoogleLoginApi(idToken);
+    const userInfo = await getUserInfoApiWithToken(loginResponse.access_token);
+    userInfo.token = loginResponse.access_token;
+    userInfo.refresh_token = loginResponse.refresh_token;
+
+    dispatch({
+      type: USER_LOGIN_SUCCESS,
+      payload: userInfo
+    });
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
+  } catch (error) {
+    dispatch({
+      type: USER_LOGIN_FAIL,
+      payload: getErrorMessage(error)
+    });
+  }
+};
+
+const getUserInfoApiWithToken = async (token) => {
+  localStorage.setItem('userInfo', JSON.stringify({ token }));
+  return getUserInfoApi();
 };
 
 export const logout = () => (dispatch) => {

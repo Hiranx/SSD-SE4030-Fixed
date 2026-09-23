@@ -5,6 +5,8 @@ import com.devd.spring.bookstoreaccountservice.web.CreateOAuthClientResponse;
 import com.devd.spring.bookstoreaccountservice.web.CreateUserResponse;
 import com.devd.spring.bookstoreaccountservice.web.SignInRequest;
 import com.devd.spring.bookstoreaccountservice.web.SignUpRequest;
+import com.devd.spring.bookstoreaccountservice.web.GoogleLoginRequest;
+import com.devd.spring.bookstoreaccountservice.web.JwtAuthenticationResponse;
 
 /**
  * @author: Devaraj Reddy, Date : 2019-09-27
@@ -14,4 +16,6 @@ public interface AuthService {
   CreateOAuthClientResponse createOAuthClient(CreateOAuthClientRequest createOAuthClientRequest);
 
   CreateUserResponse registerUser(SignUpRequest signUpRequest);
+
+  JwtAuthenticationResponse loginWithGoogle(GoogleLoginRequest googleLoginRequest);
 }

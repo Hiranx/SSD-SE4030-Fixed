@@ -97,6 +97,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     DefaultTokenServices tokenServices = new DefaultTokenServices();
     tokenServices.setSupportRefreshToken(true);
     tokenServices.setTokenStore(tokenStore);
+    tokenServices.setTokenEnhancer(jwtAccessTokenConverter());
+    tokenServices.setAccessTokenValiditySeconds(259200);
+    tokenServices.setRefreshTokenValiditySeconds(604800);
     return tokenServices;
   }
 

@@ -6,6 +6,8 @@ import Message from '../components/Message';
 import { login } from '../actions/userActions';
 import FormContainer from '../components/FormContainer';
 import FullPageLoader from '../components/FullPageLoader';
+import { loginWithGoogle } from '../actions/userActions';
+import { GOOGLE_CLIENT_ID } from '../constants/appConstants';
 
 const LoginScreen = (props) => {
   const [userNameOrEmail, setUserNameOrEmail] = useState('');
@@ -21,6 +23,40 @@ const LoginScreen = (props) => {
       props.history.push(redirect);
     }
   }, [props.history, userInfo, redirect]);
+
+  useEffect(() => {
+    if (!GOOGLE_CLIENT_ID) {
+      return undefined;
+    }
+
+    let attempts = 0;
+    const initializeGoogleSignIn = () => {
+      if (!window.google || !window.google.accounts || !window.google.accounts.id) {
+        attempts += 1;
+        return attempts < 50;
+      }
+
+      window.google.accounts.id.initialize({
+        client_id: GOOGLE_CLIENT_ID,
+        callback: (response) => dispatch(loginWithGoogle(response.credential))
+      });
+      window.google.accounts.id.renderButton(document.getElementById('google-signin-button'), {
+        theme: 'outline',
+        size: 'large',
+        width: 320,
+        text: 'continue_with'
+      });
+      return false;
+    };
+
+    const intervalId = window.setInterval(() => {
+      if (!initializeGoogleSignIn()) {
+        window.clearInterval(intervalId);
+      }
+    }, 100);
+
+    return () => window.clearInterval(intervalId);
+  }, [dispatch]);
 
   const loginSubmitHandler = (e) => {
     e.preventDefault();
@@ -56,6 +92,13 @@ const LoginScreen = (props) => {
             Sign In
           </Button>
         </Form>
+
+        {GOOGLE_CLIENT_ID && (
+          <>
+            <div className='text-center py-3'>or</div>
+            <div id='google-signin-button' className='d-flex justify-content-center'></div>
+          </>
+        )}
 
         <Row className='py-3'>
           <Col>

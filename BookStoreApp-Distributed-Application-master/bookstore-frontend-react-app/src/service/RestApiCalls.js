@@ -96,6 +96,13 @@ export const postLoginApi = async (loginRequestBody) => {
   return responseData;
 };
 
+export const postGoogleLoginApi = async (idToken) => {
+  const responseData = await axios
+    .post(`${BACKEND_API_GATEWAY_URL}/api/account/google`, { idToken })
+    .then((response) => response.data);
+  return responseData;
+};
+
 export const getUserInfoApi = async () => {
   const axiosConfig = getAxiosConfig();
   const responseData = await axios.get(`${BACKEND_API_GATEWAY_URL}/api/account/userInfo`, axiosConfig).then((response) => {
