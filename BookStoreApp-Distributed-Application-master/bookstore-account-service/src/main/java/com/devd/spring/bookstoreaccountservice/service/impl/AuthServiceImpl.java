@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -146,56 +147,175 @@ public class AuthServiceImpl implements AuthService {
 
   @Override
   public JwtAuthenticationResponse loginWithGoogle(GoogleLoginRequest googleLoginRequest) {
+
     if (googleClientId == null || googleClientId.trim().isEmpty()) {
-      throw new RunTimeExceptionPlaceHolder("Google authentication is not configured");
+      throw new RunTimeExceptionPlaceHolder(
+              "Google authentication is not configured"
+      );
     }
 
     try {
-      GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(
-          new NetHttpTransport(), JacksonFactory.getDefaultInstance())
-          .setAudience(Collections.singletonList(googleClientId))
-          .build();
-      GoogleIdToken googleIdToken = verifier.verify(googleLoginRequest.getIdToken());
-      if (googleIdToken == null || !Boolean.TRUE.equals(googleIdToken.getPayload().getEmailVerified())) {
-        throw new RunTimeExceptionPlaceHolder("Google account could not be verified");
+
+      // 1. Verify Google ID token
+      GoogleIdTokenVerifier verifier =
+              new GoogleIdTokenVerifier.Builder(
+                      new NetHttpTransport(),
+                      JacksonFactory.getDefaultInstance()
+              )
+                      .setAudience(
+                              Collections.singletonList(googleClientId)
+                      )
+                      .build();
+
+      GoogleIdToken googleIdToken =
+              verifier.verify(googleLoginRequest.getIdToken());
+
+      if (googleIdToken == null) {
+        throw new RunTimeExceptionPlaceHolder(
+                "Invalid Google ID token"
+        );
       }
 
-      GoogleIdToken.Payload payload = googleIdToken.getPayload();
+      // 2. Check whether Google email is verified
+      if (!Boolean.TRUE.equals(
+              googleIdToken.getPayload().getEmailVerified())) {
+
+        throw new RunTimeExceptionPlaceHolder(
+                "Google account could not be verified"
+        );
+      }
+
+      // 3. Get Google user information
+      GoogleIdToken.Payload payload =
+              googleIdToken.getPayload();
+
       String email = payload.getEmail();
-      String userName = "google_" + payload.getSubject();
+
+      String userName =
+              "google_" + payload.getSubject();
+
+      // 4. Find existing user or create a new user
       com.devd.spring.bookstoreaccountservice.repository.dao.User user =
-          userRepository.findByUserNameOrEmail(userName, email).orElseGet(() -> {
-            String fullName = payload.get("name") == null ? email : payload.get("name").toString();
-            String[] nameParts = fullName.trim().split("\\s+", 2);
-            String firstName = nameParts.length > 0 ? nameParts[0] : email;
-            String lastName = nameParts.length > 1 ? nameParts[1] : "";
-            Role role = roleRepository.findByRoleName("STANDARD_USER")
-                .orElseThrow(() -> new RuntimeException("User Role not set."));
-            com.devd.spring.bookstoreaccountservice.repository.dao.User newUser =
-                new com.devd.spring.bookstoreaccountservice.repository.dao.User(
-                    userName, passwordEncoder.encode(UUID.randomUUID().toString()), firstName,
-                    lastName, email);
-            newUser.setRoles(new HashSet<>(Collections.singletonList(role)));
-            return userRepository.save(newUser);
-          });
+              userRepository
+                      .findByUserNameOrEmail(userName, email)
+                      .orElseGet(() -> {
 
-      List<GrantedAuthority> authorities = new ArrayList<>();
-      user.getRoles().forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getRoleName())));
-      OAuth2Request oauth2Request = new OAuth2Request(
-          Collections.singletonMap("grant_type", "google"), oauthClientId, authorities, true,
-          Collections.singleton("read"), Collections.singleton("web"), null,
-          Collections.singleton("token"), Collections.emptyMap());
-      OAuth2Authentication authentication = new OAuth2Authentication(oauth2Request,
-          new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(), authorities));
-      OAuth2AccessToken token = tokenServices.createAccessToken(authentication);
+                        String fullName =
+                                payload.get("name") == null
+                                        ? email
+                                        : payload.get("name").toString();
 
-      return new JwtAuthenticationResponse(token.getValue(), token.getTokenType(),
-          token.getRefreshToken() == null ? null : token.getRefreshToken().getValue(),
-          token.getExpiresIn() == null ? null : token.getExpiresIn().longValue());
+                        String[] nameParts =
+                                fullName.trim().split("\\s+", 2);
+
+                        String firstName =
+                                nameParts.length > 0
+                                        ? nameParts[0]
+                                        : email;
+
+                        String lastName =
+                                nameParts.length > 1
+                                        ? nameParts[1]
+                                        : "";
+
+                        Role role =
+                                roleRepository
+                                        .findByRoleName("STANDARD_USER")
+                                        .orElseThrow(() ->
+                                                new RuntimeException(
+                                                        "User Role not set."
+                                                )
+                                        );
+
+                        com.devd.spring.bookstoreaccountservice.repository.dao.User newUser =
+                                new com.devd.spring.bookstoreaccountservice.repository.dao.User(
+                                        userName,
+                                        passwordEncoder.encode(
+                                                UUID.randomUUID().toString()
+                                        ),
+                                        firstName,
+                                        lastName,
+                                        email
+                                );
+
+                        newUser.setRoles(
+                                new HashSet<>(
+                                        Collections.singletonList(role)
+                                )
+                        );
+
+                        return userRepository.save(newUser);
+                      });
+
+      // 5. Convert user roles into Spring Security authorities
+      List<GrantedAuthority> authorities =
+              new ArrayList<>();
+
+      user.getRoles().forEach(role ->
+              authorities.add(
+                      new SimpleGrantedAuthority(
+                              role.getRoleName()
+                      )
+              )
+      );
+
+      // 6. Create OAuth2 request
+      OAuth2Request oauth2Request =
+              new OAuth2Request(
+                      Collections.singletonMap(
+                              "grant_type",
+                              "google"
+                      ),
+                      oauthClientId,
+                      authorities,
+                      true,
+                      Collections.singleton("read"),
+                      Collections.singleton("web"),
+                      null,
+                      Collections.singleton("token"),
+                      Collections.emptyMap()
+              );
+
+      // 7. Create Authentication object
+      UsernamePasswordAuthenticationToken userAuthentication =
+              new UsernamePasswordAuthenticationToken(
+                      user.getUserName(),
+                      user.getPassword(),
+                      authorities
+              );
+
+      // 8. Create OAuth2 Authentication
+      OAuth2Authentication authentication =
+              new OAuth2Authentication(
+                      oauth2Request,
+                      userAuthentication
+              );
+
+      // 9. Generate access token
+      OAuth2AccessToken token =
+              tokenServices.createAccessToken(
+                      authentication
+              );
+
+      // 10. Return response
+      return new JwtAuthenticationResponse(
+              token.getValue(),
+              token.getTokenType(),
+              token.getRefreshToken() == null
+                      ? null
+                      : token.getRefreshToken().getValue(),
+              Long.valueOf(token.getExpiresIn())
+      );
+
     } catch (RunTimeExceptionPlaceHolder exception) {
+
       throw exception;
+
     } catch (Exception exception) {
-      throw new RunTimeExceptionPlaceHolder("Google authentication failed");
+
+      throw new RunTimeExceptionPlaceHolder(
+              "Google authentication failed"
+      );
     }
   }
 }
