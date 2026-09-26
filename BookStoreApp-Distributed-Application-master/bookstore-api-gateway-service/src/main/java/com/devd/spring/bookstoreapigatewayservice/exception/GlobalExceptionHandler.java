@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleCustomException(RunTimeExceptionPlaceHolder ex) {
 
         ErrorResponse errorResponse = populateErrorResponse(ex.getHttpStatus()+"", ex.getMessage());
-        log.error("Something went wrong, Exception : " + ex.getMessage());
+        log.error("Something went wrong, Exception : {}", sanitizeForLog(ex.getMessage()));
         ex.printStackTrace();
         return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getHttpStatus()));
 
@@ -32,7 +32,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleCustomException(InvalidFormatException ex) {
 
         ErrorResponse errorResponse = populateErrorResponse("400", ex.getMessage());
-        log.error("Something went wrong, Exception : " + ex.getMessage());
+        log.error("Something went wrong, Exception : {}", sanitizeForLog(ex.getMessage()));
         ex.printStackTrace();
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 
@@ -43,7 +43,7 @@ public class GlobalExceptionHandler {
 
         ErrorResponse errorResponse = populateErrorResponse("500",
                 ex.getMessage());
-        log.error("Something went wrong, Exception : " + ex.getMessage());
+        log.error("Something went wrong, Exception : {}", sanitizeForLog(ex.getMessage()));
         ex.printStackTrace();
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 
@@ -60,5 +60,14 @@ public class GlobalExceptionHandler {
         errorResponse.setErrors(Collections.singletonList(error));
 
         return errorResponse;
+    }
+
+    static String sanitizeForLog(String value) {
+        if (value == null) {
+            return null;
+        }
+        return value
+                .replace("\r", "\\r")
+                .replace("\n", "\\n");
     }
 }
