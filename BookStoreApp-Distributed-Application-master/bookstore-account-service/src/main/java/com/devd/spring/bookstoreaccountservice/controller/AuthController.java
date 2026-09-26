@@ -5,6 +5,8 @@ import com.devd.spring.bookstoreaccountservice.web.CreateOAuthClientRequest;
 import com.devd.spring.bookstoreaccountservice.web.CreateOAuthClientResponse;
 import com.devd.spring.bookstoreaccountservice.web.CreateUserResponse;
 import com.devd.spring.bookstoreaccountservice.web.SignUpRequest;
+import com.devd.spring.bookstoreaccountservice.web.GoogleLoginRequest;
+import com.devd.spring.bookstoreaccountservice.web.JwtAuthenticationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,5 +43,11 @@ public class AuthController {
     CreateUserResponse createUserResponse = authService.registerUser(signUpRequest);
 
     return new ResponseEntity<>(createUserResponse, HttpStatus.CREATED);
+  }
+
+  @PostMapping("/google")
+  public ResponseEntity<JwtAuthenticationResponse> loginWithGoogle(
+      @Valid @RequestBody GoogleLoginRequest googleLoginRequest) {
+    return ResponseEntity.ok(authService.loginWithGoogle(googleLoginRequest));
   }
 }

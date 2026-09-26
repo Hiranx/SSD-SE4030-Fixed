@@ -67,7 +67,8 @@ const OrderScreen = ({ match, history }) => {
                 <ListGroup.Item>
                   <h2>Shipping</h2>
                   <p>
-                    <strong>Name: </strong> {userInfo.userName}
+                    <strong>Name: </strong>{' '}
+                    {[userInfo.firstName, userInfo.lastName].filter(Boolean).join(' ') || userInfo.userName}
                   </p>
                   <p>
                     <strong>Email: </strong> <a href={`mailto:${userInfo.email}`}>{userInfo.email}</a>

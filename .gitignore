@@ -1,5 +1,3 @@
-qodanaReport.html
-dependency-check-report.html
-index.html
-script.js
-styles.css
+
+*.log
+logs/

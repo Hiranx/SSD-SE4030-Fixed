@@ -7,6 +7,7 @@ import { logout } from '../actions/userActions';
 const Header = (props) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
+  const displayName = userInfo && [userInfo.firstName, userInfo.lastName].filter(Boolean).join(' ');
 
   const dispatch = useDispatch();
 
@@ -38,7 +39,7 @@ const Header = (props) => {
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
-                <NavDropdown title={userInfo.userName} id='username'>
+                <NavDropdown title={displayName || userInfo.userName} id='username'>
                   <LinkContainer to='/userProfile'>
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
