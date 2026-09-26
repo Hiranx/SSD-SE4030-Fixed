@@ -122,7 +122,8 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
                     .build();
             return getPaymentMethodResponse;
         } catch (StripeException e) {
-            throw new RunTimeExceptionPlaceHolder("Error while fetching payment method.");
+            log.error("Stripe payment method retrieval failed for userId={}", userIdFromToken, e);
+            throw new RunTimeExceptionPlaceHolder("Error while fetching payment method.", e);
         }
     }
 
@@ -135,7 +136,8 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
         try {
             return PaymentMethod.list(params);
         } catch (StripeException e) {
-            throw new RunTimeExceptionPlaceHolder("Error while retrieving customer.");
+            log.error("Stripe customer payment method listing failed for paymentCustomerId={}", paymentCustomerId, e);
+            throw new RunTimeExceptionPlaceHolder("Error while retrieving customer.", e);
         }
 
     }
@@ -146,7 +148,8 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
         try {
             paymentMethod = PaymentMethod.retrieve(paymentMethodId);
         } catch (StripeException e) {
-            throw new RunTimeExceptionPlaceHolder("Error while retrieving payment method.");
+            log.error("Stripe payment method retrieval failed while linking to customerId={}", customerId, e);
+            throw new RunTimeExceptionPlaceHolder("Error while retrieving payment method.", e);
         }
 
         Map<String, Object> params = new HashMap<>();
@@ -155,7 +158,8 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
         try {
             PaymentMethod updatedPaymentMethod = paymentMethod.attach(params);
         } catch (StripeException e) {
-            throw new RunTimeExceptionPlaceHolder("Error while attaching payment method.");
+            log.error("Stripe payment method attach failed for customerId={}", customerId, e);
+            throw new RunTimeExceptionPlaceHolder("Error while attaching payment method.", e);
         }
 
     }
@@ -174,7 +178,8 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
             PaymentMethod paymentMethod = PaymentMethod.create(params);
             return paymentMethod.getId();
         } catch (StripeException e) {
-            throw new RunTimeExceptionPlaceHolder("Error while setting up payment method.");
+            log.error("Stripe payment method setup failed", e);
+            throw new RunTimeExceptionPlaceHolder("Error while setting up payment method.", e);
         }
     }
 
@@ -190,7 +195,8 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
         try {
             return Customer.create(params).getId();
         } catch (StripeException e) {
-            throw new RunTimeExceptionPlaceHolder("Error while setting up payment customer.");
+            log.error("Stripe payment customer setup failed for userId={}", userIdFromToken, e);
+            throw new RunTimeExceptionPlaceHolder("Error while setting up payment customer.", e);
         }
 
     }

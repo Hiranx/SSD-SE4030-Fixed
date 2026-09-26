@@ -9,6 +9,7 @@ import com.devd.spring.bookstorepaymentservice.web.CreatePaymentResponse;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Charge;
 import com.stripe.model.PaymentIntent;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -27,6 +28,7 @@ import static com.devd.spring.bookstorecommons.util.CommonUtilityMethods.getUser
  * @author Devaraj Reddy, Date : 25-Jul-2020
  */
 @Service
+@Slf4j
 public class PaymentsServiceImpl implements PaymentsService {
 
     @Autowired
@@ -65,8 +67,9 @@ public class PaymentsServiceImpl implements PaymentsService {
             }
 
         } catch (StripeException e) {
-            e.printStackTrace();
-            throw new RunTimeExceptionPlaceHolder("Error while doing payment!!");
+            log.error("Stripe payment operation failed for userId={}, amount={}, currency={}",
+                    userIdFromToken, createPaymentRequest.getAmount(), createPaymentRequest.getCurrency(), e);
+            throw new RunTimeExceptionPlaceHolder("Error while doing payment!!", e);
         }
 
     }

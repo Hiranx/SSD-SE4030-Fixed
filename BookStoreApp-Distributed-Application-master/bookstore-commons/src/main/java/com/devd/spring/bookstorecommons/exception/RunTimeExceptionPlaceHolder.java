@@ -8,4 +8,8 @@ public class RunTimeExceptionPlaceHolder extends RuntimeException {
   public RunTimeExceptionPlaceHolder(String message) {
     super(message);
   }
+
+  public RunTimeExceptionPlaceHolder(String message, Throwable cause) {
+    super(message, cause);
+  }
 }
