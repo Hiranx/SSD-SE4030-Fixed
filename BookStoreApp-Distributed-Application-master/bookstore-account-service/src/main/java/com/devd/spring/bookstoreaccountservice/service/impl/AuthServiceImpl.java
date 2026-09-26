@@ -279,7 +279,11 @@ public class AuthServiceImpl implements AuthService {
       // 7. Create Authentication object
       UsernamePasswordAuthenticationToken userAuthentication =
               new UsernamePasswordAuthenticationToken(
-                      user.getUserName(),
+                      new org.springframework.security.core.userdetails.User(
+                              user.getUserName(),
+                              user.getPassword(),
+                              authorities
+                      ),
                       user.getPassword(),
                       authorities
               );
