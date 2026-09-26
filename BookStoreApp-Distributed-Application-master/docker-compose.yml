@@ -9,10 +9,10 @@ services:
     hostname: bookstore-mysql-db
     restart: always
     environment:
-      MYSQL_DATABASE: 'bookstore_db'
-      MYSQL_USER: 'bookstoreDBA'
-      MYSQL_PASSWORD: 'PaSSworD'
-      MYSQL_ROOT_PASSWORD: 'r00tPaSSworD'
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
     ports:
       - "3307:3306"
     expose:
@@ -68,6 +68,11 @@ services:
       - SERVER_PORT=4001
       - ZIPKIN_HOST=bookstore-zipkin:9411
       - SPRING_PROFILES_ACTIVE=docker
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - JWT_KEYSTORE_PASSWORD=${JWT_KEYSTORE_PASSWORD}
+      - JWT_KEY_PAIR_PASSWORD=${JWT_KEY_PAIR_PASSWORD}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
 
   bookstore-billing-service:
     build:
@@ -86,6 +91,8 @@ services:
       - SERVER_PORT=5001
       - ZIPKIN_HOST=bookstore-zipkin:9411
       - SPRING_PROFILES_ACTIVE=docker
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
 
   bookstore-catalog-service:
     build:
@@ -104,6 +111,8 @@ services:
       - SERVER_PORT=6001
       - ZIPKIN_HOST=bookstore-zipkin:9411
       - SPRING_PROFILES_ACTIVE=docker
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
 
   bookstore-order-service:
     build:
@@ -122,6 +131,8 @@ services:
       - SERVER_PORT=7001
       - ZIPKIN_HOST=bookstore-zipkin:9411
       - SPRING_PROFILES_ACTIVE=docker
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
 
   bookstore-payment-service:
     build:
@@ -140,6 +151,9 @@ services:
       - SERVER_PORT=8001
       - ZIPKIN_HOST=bookstore-zipkin:9411
       - SPRING_PROFILES_ACTIVE=docker
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
 
   # Tracing service
   bookstore-zipkin:
@@ -173,6 +187,9 @@ services:
     hostname: bookstore-graphana
     ports:
       - "3030:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
     volumes:
       - bookstore-graphana-volume:/var/lib/grafana
     networks:

@@ -107,10 +107,10 @@ datasources:
   # <string> url
   url: bookstore-mysql-db:3306
   # <string> database user, if used
-  user: bookstoreDBA
+  user: ${DB_USERNAME}
   secureJsonData:
     # <string> database password, if used
-    password: PaSSworD
+    password: ${DB_PASSWORD}
   # <string> json object of data that will be encrypted.
   version: 1
   # <bool> allow users to edit datasources from the UI.

@@ -4,13 +4,13 @@ server:
 security:
   jwt:
     key-store: classpath:JWTKeystore.p12
-    key-store-password: devdcorespass
+    key-store-password: ${JWT_KEYSTORE_PASSWORD}
     key-pair-alias: jwt-key
-    key-pair-password: devdcorespass
+    key-pair-password: ${JWT_KEY_PAIR_PASSWORD}
     public-key: classpath:jwt-signing-public-key.txt
 
 google:
-  client-id: ${GOOGLE_CLIENT_ID:588602021149-k3e2vm6c05civnvleod2dumog2tj4f1a.apps.googleusercontent.com}
+  client-id: ${GOOGLE_CLIENT_ID}
 
 spring:
   profiles:
@@ -91,8 +91,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/bookstore_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: bookstoreDBA
-    password: PaSSworD
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
 ---
 
@@ -115,5 +115,5 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://bookstore-mysql-db:3306/bookstore_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: bookstoreDBA
-    password: PaSSworD
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}

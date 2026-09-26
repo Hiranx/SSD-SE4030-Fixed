@@ -81,4 +81,4 @@ spring:
     activate:
       on-profile: local
 google:
-  client-id: 588602021149-k3e2vm6c05civnvleod2dumog2tj4f1a.apps.googleusercontent.com
+  client-id: ${GOOGLE_CLIENT_ID}

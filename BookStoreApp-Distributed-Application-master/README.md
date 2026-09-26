@@ -144,8 +144,8 @@ Kapacitor  : 9092
 ```
 First time login to Graphana use below credentials
 
-Username : admin  
-Password : admin
+Username : `<GRAFANA_ADMIN_USER>`  
+Password : `<GRAFANA_ADMIN_PASSWORD>`
 
 ```
 
@@ -181,8 +181,8 @@ Password : admin
 To Get `access_token` for the user, you need `clientId` and `clientSecret`
 
 ```
-clientId : '93ed453e-b7ac-4192-a6d4-c45fae0d99ac'
-clientSecret : 'client.devd123'
+clientId : '<OAUTH_CLIENT_ID>'
+clientSecret : '<OAUTH_CLIENT_SECRET>'
 ```
 
 There are 2 users in the system currently. 
@@ -191,17 +191,17 @@ ADMIN, NORMAL USER
 ```
 Admin 
 userName: 'admin.admin'
-password: 'admin.devd123'
+password: '<ADMIN_PASSWORD>'
 ```
 
 ```
 Normal User 
 userName: 'devd.cores'
-password: 'cores.devd123'
+password: '<USER_PASSWORD>'
 ```
 
 *To get the accessToken (Admin User)* 
 
-```curl 93ed453e-b7ac-4192-a6d4-c45fae0d99ac:client.devd123@localhost:4001/oauth/token -d grant_type=password -d username=admin.admin -d password=admin.devd123```
+```curl <OAUTH_CLIENT_ID>:<OAUTH_CLIENT_SECRET>@localhost:4001/oauth/token -d grant_type=password -d username=admin.admin -d password=<ADMIN_PASSWORD>```
 
 <hr>
